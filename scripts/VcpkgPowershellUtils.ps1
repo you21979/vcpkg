@@ -177,7 +177,7 @@ function vcpkgDownloadFileWithAria2(    [Parameter(Mandatory=$true)][string]$ari
         return
     }
 
-    $ec = vcpkgInvokeCommand "$aria2exe" "--dir `"$parentDir`" --out `"$filename.part`" $url"
+    $ec = vcpkgInvokeCommand "$aria2exe" "--dir=`"$parentDir`" --out=`"$filename.part`" $url"
     if ($ec -ne 0)
     {
         Write-Host "Could not download $url"
